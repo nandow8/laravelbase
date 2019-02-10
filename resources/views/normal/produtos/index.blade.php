@@ -22,17 +22,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            
-                                <tr>
-                                    <td>nome</td>
-                                    <td>descricao</td>
-                                    <td>preco</td>
-                                    <td>
-                                        editar
-                                        deletar
-                                    </td>
-                                </tr>
-
+                                @foreach($produtos as $key => $produto)
+                                    <tr>
+                                        <td> {{ $produto->nome }}</td>
+                                        <td> {{ $produto->descricao }}</td>
+                                        <td> {{ $produto->preco }}</td>
+                                        <td>
+                                            editar
+                                            deletar
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
