@@ -50,3 +50,29 @@
         </div>
     </div> 
 @endsection
+
+@section('local_script')
+<script>
+    $(document).ready(function () {
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            var form = this;
+
+            Swal.fire({
+                title: 'Deletar Produto?' ,
+                type: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim!',
+                cancelButtonText: 'Não',
+                }).then((result) => {
+                if (result.value) {
+                
+                    form.submit()
+                }
+            })
+        });
+    });
+</script>
+@endsection
