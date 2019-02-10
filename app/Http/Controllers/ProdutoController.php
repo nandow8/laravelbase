@@ -37,4 +37,9 @@ class ProdutoController extends Controller
 
         return redirect('produtos');  //redireciona para index do produto
     }
+
+    public function edit($id){
+        $produto = Produto::find($id);
+        return view('normal.produtos.edit', ['produto' => $produto]);
+    }
 }

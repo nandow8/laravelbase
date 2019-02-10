@@ -28,7 +28,9 @@
                                         <td> {{ $produto->descricao }}</td>
                                         <td> {{ $produto->preco }}</td>
                                         <td>
-                                            editar
+                                            <a href="{{ url('/produtos/' . $produto->id . '/edit') }}" title="Editar Produto">
+                                                <button class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                                            </a>
                                             deletar
                                         </td>
                                     </tr>
