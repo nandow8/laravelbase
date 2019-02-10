@@ -11,12 +11,12 @@
                         <br />
                         <br />
 
-                        <form method="POST" action="{{ route('produtos.edit' , $produto->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/produtos/' . $produto->id) }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                            @method('PUT')
                             {{ csrf_field() }}
 
-                            @include ('normal.produtos.form', ['formMode' => 'edit'])
-
-                        </form>
+                            @include ('normal.produtos.form', ['formMode' => 'Editar'])                 
+                        </form> 
 
                     </div>
                 </div>

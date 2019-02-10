@@ -42,4 +42,15 @@ class ProdutoController extends Controller
         $produto = Produto::find($id);
         return view('normal.produtos.edit', ['produto' => $produto]);
     }
+
+    public function update(Request $request, $id){
+        $requestData = $request->all();
+        
+        $produto = Produto::findOrFail($id);
+        $produto->update($requestData);
+
+        toastr()->success('Editado com sucesso');
+
+        return redirect('produtos');
+    }
 }
