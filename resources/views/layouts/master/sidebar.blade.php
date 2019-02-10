@@ -29,15 +29,15 @@
             <a href="#" class="nav-link">
               <i class="fa fa-tags fa-1"></i>
               <p>
-                Dashboard
+                Produtos
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('produtos.index') }}" class="nav-link">
                   <i class="fa fa-bicycle fa-1 nav-icon"></i>
-                  <p>Dashboard</p>
+                  <p>Produto</p>
                 </a>
               </li>
             </ul>
@@ -48,3 +48,5 @@
     </div>
     <!-- /.sidebar -->
   </aside>
+
+  <!-- local para copiar os icones: https://fontawesome.com/v4.7.0/icons/#new -->
