@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-hover">
-                        <table class="table" id="tabela_blogs">
+                        <table class="table" id="tabela_produtos">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -72,6 +72,23 @@
                     form.submit()
                 }
             })
+        });
+
+        $("#tabela_produtos").DataTable({
+            "language": {
+                "sSearch": "Pesquisar",
+                "lengthMenu": "",
+                "zeroRecords": "",
+                "info": "Mostrando _PAGE_ de _PAGES_ paginas",
+                "infoEmpty": "Nenhum registro encontrado",
+                "sLoadingRecords": "Carregando...",
+                "oPaginate": {
+                    "sNext": "Próximo",
+                    "sPrevious": "Anterior",
+                    "sFirst": "Primeiro",
+                    "sLast": "Último"
+                },
+            }
         });
     });
 </script>
