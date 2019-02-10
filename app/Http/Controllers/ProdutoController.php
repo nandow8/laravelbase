@@ -11,4 +11,8 @@ class ProdutoController extends Controller
         $produtos = Produto::all();
         return view('normal.produtos.index', ['produtos' => $produtos]);
     }
+
+    public function create(){
+        return view('normal.produtos.create');
+    }
 }

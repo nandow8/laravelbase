@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header">
                     <span class="h3">Blogs</span>
-                    <a style="float:right;" href="{{ url('/admin/blogs/create') }}" class="btn btn-success btn-sm pull-right" title="Add New Blog">
+                    <a style="float:right;" href="{{ route('produtos.create') }}" class="btn btn-success btn-sm pull-right" title="Add New Blog">
                         <i class="fa fa-plus" aria-hidden="true"></i> Adicionar novo Produto
                     </a>
                 </div>
