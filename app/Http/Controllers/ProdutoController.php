@@ -17,6 +17,13 @@ class ProdutoController extends Controller
     }
 
     public function store(Request $request){
+
+        $validatedData = $request->validate([
+            'nome' => 'required',
+            'descricao' => 'required|min:3',
+            'preco' => 'required|numeric'
+        ]);
+
          // desta maneira voce adiciona automaticamente tudo que vier pra ca
         $requestData = $request->all();
         

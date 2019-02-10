@@ -1,26 +1,35 @@
 <div class="container">
-    <div class="form-group row">
+    <div class="form-group{{ $errors->has('nome') ? ' has-error' : ''}} row">
         <label class="col-2 col-form-label" for="nome">{{ 'Nome' }}</label>
 
         <div class="col-5">
-            <input name="nome" class="form-control" type="text" id="nome">
+            <input name="nome" class="form-control" type="text" id="nome" value="{{ old('nome', isset($produto->nome) ? $produto->nome : '') }}">
         </div>
+        @if ($errors->has('nome'))
+            <span class="text-danger">{{ $errors->first('nome') }}</span>
+        @endif
     </div> 
 
-    <div class="form-group row">
+    <div class="form-group{{ $errors->has('descricao') ? ' has-error' : ''}} row">
         <label  class="col-2 col-form-label" for="descricao">Descricao</label>
 
         <div class="col-5">
-            <textarea name="descricao" class="form-control" id="descricao" rows="3"></textarea>
+            <textarea name="descricao" class="form-control" id="descricao" rows="3">{{ old('descricao', isset($produto->descricao) ? $produto->descricao : '') }}</textarea>
         </div>
+        @if ($errors->has('descricao'))
+            <span class="text-danger">{{ $errors->first('descricao') }}</span>
+        @endif
     </div>
 
-    <div class="form-group row">
+    <div class="form-group{{ $errors->has('preco') ? ' has-error' : ''}} row">
         <label class="col-2 col-form-label" for="preco">{{ 'Preço' }}</label>
 
         <div class="col-5">
-            <input name="preco" class="form-control" type="number" id="preco">
+            <input name="preco" class="form-control" type="number" id="preco" value="{{ old('preco', isset($produto->preco) ? $produto->preco : '') }}">
         </div>
+        @if ($errors->has('preco'))
+            <span class="text-danger">{{ $errors->first('preco') }}</span>
+        @endif
     </div>
 
     <br/>
