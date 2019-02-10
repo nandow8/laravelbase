@@ -53,4 +53,10 @@ class ProdutoController extends Controller
 
         return redirect('produtos');
     }
+
+    public function destroy($id){
+        Produto::destroy($id);
+        toastr()->error('Deletado com sucesso');
+        return redirect('produtos');
+    }
 }

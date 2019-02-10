@@ -25,4 +25,5 @@ Route::get('produtos/create', 'ProdutoController@create')->name('produtos.create
 Route::post('produtos/store', 'ProdutoController@store')->name('produtos.store');
 Route::get('produtos/{id}/edit', 'ProdutoController@edit')->name('produtos.edit');
 Route::post('produtos/{id}', 'ProdutoController@update')->name('produtos.edit');
+Route::delete('produtos/{id}', 'ProdutoController@destroy')->name('produtos.destroy');
 

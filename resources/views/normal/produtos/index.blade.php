@@ -31,7 +31,13 @@
                                             <a href="{{ url('/produtos/' . $produto->id . '/edit') }}" title="Editar Produto">
                                                 <button class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></button>
                                             </a>
-                                            deletar
+                                            
+                                            <form action="{{ route('produtos.destroy',$produto->id) }}" method="POST" style="display: inline;">
+                                                @csrf
+                                                @method('DELETE')
+
+                                                <button type="submit" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
