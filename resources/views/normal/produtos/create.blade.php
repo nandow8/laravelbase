@@ -11,7 +11,7 @@
                         <br />
                         <br />
 
-                        <form method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('produtos.store') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
                             @include ('normal.produtos.form', ['formMode' => 'create'])

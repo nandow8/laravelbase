@@ -3,7 +3,7 @@
         <label class="col-2 col-form-label" for="nome">{{ 'Nome' }}</label>
 
         <div class="col-5">
-            <input class="form-control" type="text" id="nome">
+            <input name="nome" class="form-control" type="text" id="nome">
         </div>
     </div> 
 
@@ -11,7 +11,7 @@
         <label  class="col-2 col-form-label" for="descricao">Descricao</label>
 
         <div class="col-5">
-            <textarea class="form-control" id="descricao" rows="3"></textarea>
+            <textarea name="descricao" class="form-control" id="descricao" rows="3"></textarea>
         </div>
     </div>
 
@@ -19,7 +19,7 @@
         <label class="col-2 col-form-label" for="preco">{{ 'Preço' }}</label>
 
         <div class="col-5">
-            <input class="form-control" type="number" id="preco">
+            <input name="preco" class="form-control" type="number" id="preco">
         </div>
     </div>
 
